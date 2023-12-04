@@ -4,4 +4,4 @@ const techMessage = {
     },
 };
 
-module.exports =techController;
+module.exports = techController;
