@@ -1,9 +1,7 @@
-const express = require ("express");
+const express = require("express");
 const router = express.Router();
-const techController = require("../controllers/techController");
+const techMessage = require("../controllers/techController"); // Corrected import name
 
-router.get ("/ttech", techController.ttechMessage);
-
-console.log(require.resolve('./controllers/techController'));
+router.get("/ttech", techMessage.ttechMessage); // Use techMessage instead of techController
 
 module.exports = router;

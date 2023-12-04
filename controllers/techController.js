@@ -4,4 +4,4 @@ const techMessage = {
     },
 };
 
-module.exports = techMessage;
+module.exports = techMessage; // Corrected export name
