@@ -1,10 +1,9 @@
 const express = require("express");
 const router = express.Router();
-const techMessage = require("../controllers/techController"); // Corrected import name
+const controllers = require("../controllers/techController"); 
 
-app.get("/", (req, res) => {
-    res.send("Hello World!");
-})
-router.get("/ttech", techMessage.ttechMessage); // Use techMessage instead of techController
+controllers.forEach(controller => {
+    router.get(controller.path, controller.handler);
+});
 
 module.exports = router;

@@ -4,4 +4,13 @@ const techMessage = {
     },
 };
 
-module.exports = techMessage; // Corrected export name
+const hello = {
+    hhello: (req, res) => {
+        res.send("Hello World");
+    },
+};
+
+module.exports = [
+    { path: '/ttech', handler: techMessage.ttechMessage },
+    { path: '/hhello', handler: hello.hhello }
+];
