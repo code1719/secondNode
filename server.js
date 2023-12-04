@@ -4,7 +4,7 @@ const routes = require("./routes/index");
 
 const PORT = process.env.PORT || 3000;
 
-app.use("/", routes);
+app.use("/", require("./routes"));
 
 app.listen(PORT, () => {
   console.log(`Test server running on port ${PORT}`);
